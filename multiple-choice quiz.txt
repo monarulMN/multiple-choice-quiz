@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var c=0;
+            function checkEdu()
+            {
+                if(document.edu.plantform[0].checked==true){    3 Marks
+                    c=c+1;
+                }
+                else{
+                    alert("Wrong Answer");
+                    document.getElementById("txt").value="Windows";     2 Marks
+                }
+            }
+            function display_count()
+            {
+                alert(c);   2 Marks
+            }
+        </script>
+    </head>
+    <body>
+        <div id="time"></div>
+        <form name="edu">
+            The best computer platform for education is<br>
+            <input type="rario" name="platform" value="Windows">Windows<br>
+            <input type="radio" name="platform" value="Apple">Apple<br>
+            <input type="radio" name="platform" value="Unix">Unix<br>
+            
+            <input type="button" name="check" value="Check Answer for Question 1"
+            onclick="checkEdu()">
+            Correct Answer:<input type="text" id="text" value=""><br>
+            <input type="submit" onclick="display_count()">
+        </form>
+        <script>
+            var today = new Date();     1 Marks
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            document.getElementById('time').innerHTML = h+":"+m+":"+s;
+        </script>
+    </body>
+</html>
